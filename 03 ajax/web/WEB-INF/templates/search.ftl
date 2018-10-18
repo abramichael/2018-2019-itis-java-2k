@@ -8,11 +8,6 @@
 <div id="found-list"/>
 
 <script type="application/javascript">
-    function f() {
-        var input = $("#text-input").val();
-
-    }
-
     function g(request, response) {
         if ($("#text-input").val().length > 0) {
             $.ajax({
@@ -24,7 +19,7 @@
 
                     var lst = $("#found-list");
                     lst.html("");
-                    for (var i = 0; i < msg.students.length; i++) {
+                    for (let i = 0; i < msg.students.length; i++) {
                         lst.append("<li>" + msg.students[i] + "</li>")
                     }
                 },
