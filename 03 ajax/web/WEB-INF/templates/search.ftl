@@ -20,7 +20,7 @@
                 data: {
                     "q": $("#text-input").val()
                 },
-                success: function (msg) {
+                success: (msg) => {
 
                     var lst = $("#found-list");
                     lst.html("");
@@ -28,7 +28,7 @@
                         lst.append("<li>" + msg.students[i] + "</li>")
                     }
                 },
-                error: function (msg) {
+                error: (msg) => {
                     alert(2);
                 }
             });
