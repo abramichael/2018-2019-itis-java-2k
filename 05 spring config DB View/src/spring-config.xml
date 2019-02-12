@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean name="file" class="java.io.File">
+        <constructor-arg value="users.txt"/>
+    </bean>
+
+    <bean name="scanner" class="java.util.Scanner">
+        <constructor-arg ref="file"/>
+    </bean>
+
+    <bean name="db" class="ru.kpfu.itis.group701.db.DocumentDB">
+        <property name="scanner" ref="scanner"/>
+    </bean>
+
+    <bean name="view" class="ru.kpfu.itis.group701.views.HTMLView"/>
+
+</beans>
