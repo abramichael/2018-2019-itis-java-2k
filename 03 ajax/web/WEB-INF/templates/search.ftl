@@ -24,8 +24,8 @@
 
                     var lst = $("#found-list");
                     lst.html("");
-                    for (var i = 0; i < msg.students.length; i++) {
-                        lst.append("<li>" + msg.students[i] + "</li>")
+                    for (let student of msg.students) {
+                        lst.append("<li>" + student + "</li>")
                     }
                 },
                 error: function (msg) {
