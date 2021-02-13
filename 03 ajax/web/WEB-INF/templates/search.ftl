@@ -8,12 +8,12 @@
 <div id="found-list"/>
 
 <script type="application/javascript">
-    function f() {
+    const f = () => {
         var input = $("#text-input").val();
 
     }
 
-    function g(request, response) {
+    const g = (request, response) => {
         if ($("#text-input").val().length > 0) {
             $.ajax({
                 url: "/doSearch",
